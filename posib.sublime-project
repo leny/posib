@@ -1,0 +1,41 @@
+{
+    "folders":
+    [
+        {
+            "file_exclude_patterns": [
+                ".gitignore",
+                "*.sublime-*",
+                "*.orig"
+            ],
+            "folder_exclude_patterns": [
+                ".vagrant",
+                "lib",
+                "node_modules",
+                "src",
+            ],
+            "name": "[posib.]",
+            "path": "."
+        },
+        {
+            "file_exclude_patterns": [
+                "*.orig"
+            ],
+            "name": "Server",
+            "path": "src/server"
+        },
+        {
+            "file_exclude_patterns": [
+                "*.orig"
+            ],
+            "name": "Client",
+            "path": "src/client"
+        },
+        {
+            "file_exclude_patterns": [
+                "*.orig"
+            ],
+            "name": "Sample",
+            "path": "sample"
+        }
+    ]
+}
