@@ -21,4 +21,4 @@ started at 02/02/14
 
     exports.start = ( oConfig ) ->
         config.init oConfig
-        router.listen config.get().port
+        router.init config.get().port, config.get().path

@@ -20,30 +20,37 @@ Config & setup of the **expressjs** router.
 
     middlewares = require "#{ root }/core/router/middlewares.js"
 
+### init( port, staticPath )
+
 Setting up an express router app.
 
-    app = express()
+    exports.init = ( iPort, sStaticPath ) ->
+        app = express()
 
 Configure some default middlewares
 
-    app.use express.json()
-    app.use express.urlencoded()
-    app.use express.cookieParser()
+        app.use express.json()
+        app.use express.urlencoded()
+        app.use express.cookieParser()
 
 Configure static middleware(s)
 
-> TODO
+        app.use express.static sStaticPath
 
 Configure logging middleware
 
-    app.use middlewares.log
+        app.use middlewares.log
 
 Load controllers
 
-    require( "#{ root }/controllers/public.js" ).init app
+        require( "#{ root }/controllers/public.js" ).init app
 
 Define the router
 
-    app.use app.router
+        app.use app.router
 
-    module.exports = app
+Listen the requests
+
+        app.listen iPort
+
+        app
