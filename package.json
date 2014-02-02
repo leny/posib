@@ -1,6 +1,7 @@
 {
   "name": "posib",
   "description": "Simple in-place editing CMS",
+  "keywords": [],
   "version": "0.0.1",
   "homepage": "https://github.com/krkn/posib",
   "author": {
@@ -36,9 +37,18 @@
     "test": "grunt nodeunit"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6",
+    "grunt": "~0.4",
+    "grunt-clear": "~0.2",
+    "grunt-contrib-coffee": "~0.9",
+    "grunt-contrib-jshint": "~0.8",
+    "grunt-contrib-stylus": "~0.12",
+    "grunt-bumpup": "~0.5",
     "grunt-contrib-watch": "~0.5",
-    "grunt": "~0.4"
-  },
-  "keywords": []
+    "grunt-nodemon": "~0.2",
+    "grunt-concurrent": "~0.4",
+    "grunt-csso": "~0.5",
+    "jshint-stylish": "~0.1",
+    "matchdep": "~0.3",
+    "grunt-newer": "~0.6"
+  }
 }
