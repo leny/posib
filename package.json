@@ -2,7 +2,7 @@
   "name": "posib",
   "description": "Simple in-place editing CMS",
   "keywords": [],
-  "version": "0.0.1-15",
+  "version": "0.0.1-54",
   "homepage": "http://posib.krkn.be",
   "author": {
     "name": "krkn",
@@ -49,6 +49,8 @@
     "grunt-newer": "~0.6"
   },
   "dependencies": {
-    "lodash": "~2.4"
+    "lodash": "~2.4",
+    "express": "~3.4",
+    "cli-color": "~0.2"
   }
 }
