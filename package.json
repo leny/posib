@@ -3,7 +3,7 @@
   "description": "Simple in-place editing CMS",
   "keywords": [],
   "version": "0.0.1",
-  "homepage": "https://github.com/krkn/posib",
+  "homepage": "http://posib.krkn.be",
   "author": {
     "name": "krkn",
     "email": "info@krkn.be",
@@ -14,7 +14,7 @@
       "name": "leny",
       "email": "leny@krkn.be",
       "url": "http://leny.me"
-    },
+    }
   ],
   "repository": {
     "type": "git",
@@ -29,12 +29,9 @@
       "url": "https://github.com/krkn/posib/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/posib",
+  "main": "lib/server/posib.js",
   "engines": {
     "node": ">= 0.10.0"
-  },
-  "scripts": {
-    "test": "grunt nodeunit"
   },
   "devDependencies": {
     "grunt": "~0.4",
