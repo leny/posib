@@ -107,7 +107,7 @@ module.exports = ( grunt ) ->
                 ]
         nodemon:
             work:
-                script: "lib/server/posib.js"
+                script: "sample/posib.js"
                 options:
                     ext: "js"
                     watch: [ "lib/server" ]
