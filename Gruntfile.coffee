@@ -12,7 +12,7 @@ module.exports = ( grunt ) ->
                 src: [
                     "**/*.litcoffee"
                 ]
-                dest: "bin/"
+                dest: "lib/server/"
                 ext: ".js"
                 options:
                     bare: yes
@@ -131,7 +131,7 @@ module.exports = ( grunt ) ->
         "clear"
         "coffee"
         "jshint"
-        "styles"
+        "stylus"
         "bumpup:prerelease"
     ]
 
@@ -139,7 +139,7 @@ module.exports = ( grunt ) ->
         "clear"
         "coffee"
         "jshint"
-        "styles"
+        "stylus"
         "bumpup:prerelease"
         "concurrent:work"
     ]
