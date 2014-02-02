@@ -12,7 +12,7 @@ started at 02/02/14
 
     root = "#{ __dirname }/.."
 
-    chalk = require "chalk"
+    clc = require "cli-color"
 
 ### log()
 
@@ -28,15 +28,15 @@ Formatted console log, with date, color & context.
         sMessage = "[#{ sContext }] #{ sMessage }"
         switch sMessageType
             when "ERROR", "ERR", "RED"
-                console.log "#{ sDatePrefix } - #{ chalk.red.bold( sMessage ) }"
+                console.log sDatePrefix, clc.red.bold sMessage
             when "WARNING", "WARN", "YELLOW"
-                console.log "#{ sDatePrefix } - #{ chalk.yellow( sMessage ) }"
+                console.log sDatePrefix, clc.yellow sMessage
             when "SUCCESS", "GREEN"
-                console.log "#{ sDatePrefix } - #{ chalk.green( sMessage ) }"
+                console.log sDatePrefix, clc.green sMessage
             when "MAGENTA"
-                console.log "#{ sDatePrefix } - #{ chalk.magenta( sMessage ) }"
+                console.log sDatePrefix, clc.magenta sMessage
             else
-                console.log "#{ sDatePrefix } - #{ chalk.cyan( sMessage ) }"
+                console.log sDatePrefix, clc.cyan sMessage
 
     exports.log = log
 
