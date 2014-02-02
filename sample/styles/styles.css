@@ -1,0 +1,76 @@
+html,body{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,cite,code,del,dfn,em,img,q,s,samp,small,strike,strong,sub,sup,tt,var,dd,dl,dt,li,ol,ul,fieldset,form,label,legend,button,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:normal;font-style:normal;font-size:100%;line-height:1;font-family:inherit;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{margin:0;padding:0;border:0;font-weight:normal;font-style:normal;font-size:100%;line-height:1;font-family:inherit;}
+table{border-collapse:collapse;border-spacing:0;}
+ol,ul{list-style:none;}
+q:before,q:after,blockquote:before,blockquote:after{content:"";}
+html{overflow-y:scroll;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+a:focus{outline:thin dotted;}
+a:hover,a:active{outline:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
+audio:not([controls]){display:none;}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+img{border:0;-ms-interpolation-mode:bicubic;}
+button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle;}
+button,input{line-height:normal;*overflow:visible;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;}
+input[type="search"]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}
+textarea{overflow:auto;vertical-align:top;}
+html{width:100%;height:100%;}
+body{width:100%;*zoom:1;}body:before,body:after{content:"";display:table;}
+body:after{clear:both;}
+html{background:transparent url(img/crbn.png) top left repeat;}
+body{font:normal 62.5%/1.5 Verdana,Arial,sans-serif;}
+#wrapper{width:100%;min-height:750px;background:#ffffff url(img/bcg.png) top left repeat;border-top:1px solid #666;border-bottom:1px solid #666;position:relative;}#wrapper:before,#wrapper:after{display:block;content:"";width:100%;height:9px;position:absolute;left:0;background:yellow;}
+#wrapper:before{background:transparent url(img/shadow_bottom.png) bottom left repeat-x;top:-9px;}
+#wrapper:after{background:transparent url(img/shadow_up.png) top left repeat-x;bottom:-9px;}
+header{position:relative;height:90px;margin:0 auto 30px;*zoom:1;width:960px;margin:0 auto;}header:before,header:after{content:"";display:table;}
+header:after{clear:both;}
+header h1{width:295px;height:70px;margin:10px 10px 0;padding:10px 0 0;}header h1 a{font:normal 4em "Trebuchet Sans MS",Arial,Verdana,sans-serif;color:#915c24;text-decoration:none;}
+header nav{position:absolute;bottom:40px;right:20px;text-align:right;}header nav ul li{display:inline;margin:0 0 0 20px;}header nav ul li a{text-transform:uppercase;text-decoration:none;font:600 1.3em Verdana,Arial,sans-serif;color:#68421a;}header nav ul li a:hover{color:#915c24;border-bottom:2px solid #915c24;}
+header nav ul li.active a{color:#68421a;border-bottom:2px solid #68421a;}
+section{*zoom:1;width:960px;margin:0 auto;margin:0 auto 10px;}section:before,section:after{content:"";display:table;}
+section:after{clear:both;}
+section.banner{text-align:center;}
+section.texts h2{margin:0 auto 20px;font:700 2em Verdana,Arial,sans-serif;display:inline;float:left;width:940px;margin:0 10px;}
+section.texts h3{margin:0 auto 10px;font:600 1.6em Verdana,Arial,sans-serif;display:inline;float:left;width:940px;margin:0 10px;}
+section.texts div.col{text-align:justify;}section.texts div.col p{font:normal 1.2em Verdana,Arial,sans-serif;margin:0 auto 1.2em;}section.texts div.col p strong,section.texts div.col p b{font-weight:bold;}
+section.texts div.col p em,section.texts div.col p i{font-style:italic;}
+section.texts div.col figure{margin:0 auto 10px;}section.texts div.col figure figcaption{font:600 1.1em Verdana,Arial,sans-serif;text-align:center;}
+section.texts div.col address{height:400px;}
+section.texts div.col form p.form_sended{text-align:center;font:normal 1.4em Verdana,Arial,sans-serif;}
+section.texts div.col form div.field{margin:0 auto 20px;text-align:left;}section.texts div.col form div.field label{display:block;font:600 1.4em Verdana,Arial,sans-serif;color:#68421a;margin:0 auto 1px;text-transform:uppercase;}
+section.texts div.col form div.field input,section.texts div.col form div.field textarea,section.texts div.col form div.field select{display:inline-block;width:440px;height:1.5em;padding:4px;font:normal 1.3em/1.5em Verdana,Arial,sans-serif;color:#915c24;border:1px solid #ccc;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#f5f5f5;-webkit-transition:border linear 0.2s,box-shadow linear 0.2s;-moz-transition:border linear 0.2s,box-shadow linear 0.2s;-ms-transition:border linear 0.2s,box-shadow linear 0.2s;-o-transition:border linear 0.2s,box-shadow linear 0.2s;transition:border linear 0.2s,box-shadow linear 0.2s;-webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);-moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1);}
+section.texts div.col form div.field select{padding:initial;height:1.85em;*height:auto;line-height:1.85em;*margin-top:4px;}
+section.texts div.col form div.field textarea{height:125px;}
+section.texts div.col form div.field input:focus,section.texts div.col form div.field textarea:focus{outline:0;border-color:#915c24;-webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(145, 92, 36, 0.6);-moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(145, 92, 36, 0.6);box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(145, 92, 36, 0.6);}
+section.texts div.col form div.field select:focus{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;outline:1px dotted #666;}
+section.texts div.col form div.button{text-align:center;}section.texts div.col form div.button input{cursor:pointer;display:inline-block;background-color:#815220;background-image:-moz-linear-gradient(top, #915c24, #68421a);background-image:-ms-linear-gradient(top, #915c24, #68421a);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#915c24), to(#68421a));background-image:-webkit-linear-gradient(top, #915c24, #68421a);background-image:-o-linear-gradient(top, #915c24, #68421a);background-image:linear-gradient(top, #915c24, #68421a);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#915c24', endColorstr='#68421a', GradientType=0);padding:5px 14px 6px;text-shadow:0 -1px 1px rgba(0, 0, 0, 0.5);color:white;font-size:1.3em;line-height:normal;border:1px solid #ccc;border-bottom-color:#bbb;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05);-moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05);box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2),0 1px 2px rgba(0, 0, 0, 0.05);}section.texts div.col form div.button input:hover{background-color:#583816;background-image:-moz-linear-gradient(top, #68421a, #3f2810);background-image:-ms-linear-gradient(top, #68421a, #3f2810);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#68421a), to(#3f2810));background-image:-webkit-linear-gradient(top, #68421a, #3f2810);background-image:-o-linear-gradient(top, #68421a, #3f2810);background-image:linear-gradient(top, #68421a, #3f2810);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#68421a', endColorstr='#3f2810', GradientType=0);color:white;text-decoration:none;}
+section.texts.one div.col{display:inline;float:left;width:940px;margin:0 10px;}
+section.texts.two div.col{display:inline;float:left;width:460px;margin:0 10px;}
+section.texts.two-one-one div.col{display:inline;float:left;width:220px;margin:0 10px;}
+section.texts.two-one-one div.col:first-of-type{display:inline;float:left;width:460px;margin:0 10px;}
+section.texts.three div.col{display:inline;float:left;width:300px;margin:0 10px;}
+section.texts.four div.col{display:inline;float:left;width:220px;margin:0 10px;}
+section.texts.six div.col{display:inline;float:left;width:140px;margin:0 10px;}
+footer{width:960px;margin:0 auto;*zoom:1;text-align:center;padding:0 0 30px;}footer:before,footer:after{content:"";display:table;}
+footer:after{clear:both;}
+footer hr{width:940px;margin:0 auto 10px;border:0;border-top:1px solid #aaa;height:1px;background:#eee;}
+footer p{font:normal 1.1em Verdana,Arial,sans-serif;color:#888;}footer p strong,footer p b{font-weight:bold;}
+footer p em,footer p i{font-style:italic;}
+div#first_visit{width:100%;margin:0 auto;}div#first_visit p{width:960px;margin:0 auto;padding:5px;text-align:center;}div#first_visit p a{text-decoration:none;color:#dddddd;font:normal 1.6em Verdana,Arial,sans-serif;}div#first_visit p a strong{font:bold 2em "Trebuchet Sans MS",Arial,Verdana,sans-serif;}
+div#first_visit p a em{color:#fdba31;}
+div#minibos-explain{width:100%;}div#minibos-explain h2{width:100%;padding:5px 0;text-align:center;margin:10px auto;}div#minibos-explain h2 a{display:block;width:960px;margin:0 auto;text-decoration:none;color:#dddddd;font:normal 4em "Trebuchet Sans MS",Arial,Verdana,sans-serif;}div#minibos-explain h2 a strong{font-weight:bold;}
+div#minibos-explain div.explain{*zoom:1;width:960px;margin:0 auto;}div#minibos-explain div.explain:before,div#minibos-explain div.explain:after{content:"";display:table;}
+div#minibos-explain div.explain:after{clear:both;}
+div#minibos-explain div.explain>div{display:inline;float:left;width:220px;margin:0 10px;text-align:justify;}div#minibos-explain div.explain>div p{font:normal 1.2em Verdana,Arial,sans-serif;color:#dddddd;}div#minibos-explain div.explain>div p strong,div#minibos-explain div.explain>div p b{font-weight:bold;}
+div#minibos-explain div.explain>div p em,div#minibos-explain div.explain>div p i{font-style:italic;}
+div#minibos-explain div.explain>div p a{color:#bbbbff;}div#minibos-explain div.explain>div p a:hover{color:#9999ee;}
+div#minibos-explain #calltoaction{margin:30px auto 0;text-align:center;}div#minibos-explain #calltoaction a{background-color:#9d6427;background-image:-moz-linear-gradient(top, #a56929, #915c24);background-image:-ms-linear-gradient(top, #a56929, #915c24);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#a56929), to(#915c24));background-image:-webkit-linear-gradient(top, #a56929, #915c24);background-image:-o-linear-gradient(top, #a56929, #915c24);background-image:linear-gradient(top, #a56929, #915c24);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a56929', endColorstr='#915c24', GradientType=0);display:inline-block;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;padding:5px 7px;text-decoration:none;line-height:2em;font:normal 1.4em Verdana,Arial,sans-serif;color:white;text-shadow:0 -1px 1px rgba(0, 0, 0, 0.5);box-shadow:0 0 2px #915c24,0 0 10px rgba(0, 0, 0, 0.5);border:1px solid rgba(255, 255, 255, 0.25);}div#minibos-explain #calltoaction a strong{font:bold 1.4em "Trebuchet Sans MS",Arial,Verdana,sans-serif;color:#fdc24a;}
+div#minibos-explain #calltoaction a:hover{background-color:#845421;background-image:-moz-linear-gradient(top, #895722, #7d4f1f);background-image:-ms-linear-gradient(top, #895722, #7d4f1f);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#895722), to(#7d4f1f));background-image:-webkit-linear-gradient(top, #895722, #7d4f1f);background-image:-o-linear-gradient(top, #895722, #7d4f1f);background-image:linear-gradient(top, #895722, #7d4f1f);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#895722', endColorstr='#7d4f1f', GradientType=0);color:rgba(255, 255, 255, 0.75);border:1px solid rgba(255, 255, 255, 0.15);}div#minibos-explain #calltoaction a:hover strong{color:#fdba31;}
+div#minibos-explain #credits{margin:40px auto 0;width:180px;height:75px;border-top:1px solid #555;padding:5px 0 0;text-align:center;}div#minibos-explain #credits a{margin:0 5px;font:normal 1.1em Verdana,Arial,sans-serif;text-decoration:none;color:#bbbbff;}div#minibos-explain #credits a:hover{color:#9999ee;}

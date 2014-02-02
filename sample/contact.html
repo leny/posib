@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr_BE">
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+
+        <link rel="stylesheet" href="/styles/styles.css" />
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>
+                    <a href="/">Votre Société</a>
+                </h1>
+
+                <nav>
+                    <ul data-menu="yes">
+                        <li>
+                            <a data-content="yes" data-href="yes"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="banner">
+                <img data-brick="banner" src="http://placehold.it/940x100" />
+            </section>
+
+            <section class="texts two">
+                <h2 data-brick="subtitle">
+                    Contactez-nous !
+                </h2>
+                <div class="col">
+                    <p data-brick="col1.1.text"></p>
+                    <address data-brick="map">
+                        Rue de la madeleine, 67<br />
+                        7500 Tournai
+                    </address>
+                </div>
+                <div class="col">
+                    <form data-brick="contact.form">
+                        <div class="field">
+                            <label for="nom">
+                                nom
+                            </label>
+                            <input name="nom" id="nom" placeholder="votre nom" value="" />
+                        </div>
+                        <div class="field">
+                            <label for="prenom">
+                                prénom
+                            </label>
+                            <input name="prenom" id="prenom" placeholder="votre prénom" value="" />
+                        </div>
+                        <div class="field">
+                            <label for="telephone">
+                                téléphone
+                            </label>
+                            <input name="telephone" id="telephone" placeholder="n° de téléphone" value="" />
+                        </div>
+                        <div class="field">
+                            <label for="email">
+                                email
+                            </label>
+                            <input name="email" id="email" placeholder="email de contact" value="" />
+                        </div>
+                        <div class="field">
+                            <label for="message">
+                                message
+                            </label>
+                            <textarea name="message" id="message"></textarea>
+                        </div>
+                        <div class="button">
+                            <input type="submit" name="send" value="envoyer" />
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <footer>
+                <hr />
+                <p data-brick="footer.text"></p>
+            </footer>
+        </div>
+    </body>
+</html>
