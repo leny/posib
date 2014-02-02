@@ -11,7 +11,11 @@ _(Coming soon)_
 _(Coming soon)_
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+In lieu of a formal styleguide, take care to maintain the existing coding style. Lint your code using [Grunt](http://gruntjs.com/).
+
+### Code organization
+
+All the code is stored under the `/src` folder. The code is written in **Literate Coffeescript**.
 
 ### Setup development environment
 
@@ -30,6 +34,8 @@ It will launch `grunt watch` and `nodemon` tasks, compiling and restarting serve
 
 Open a browser to [192.168.1.222](http://192.168.1.222) to preview the **posib.** development website.  
 The files for the *dev* website are stored under the `sample` folder.
+
+If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file is included.
 
 ## Release History
 
