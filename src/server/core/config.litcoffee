@@ -15,22 +15,27 @@ Singleton Class to store configuration in-memory.
     "use strict"
 
     _ = require "lodash"
+    path = require "path"
 
     oConfigInstance = null
 
     class Config
         _oDefaultConfigValues =
             port: 22000
+            path: "."
             contents: "./contents"
             home: "index.html"
 
         _oCurrentConfigValues = {}
 
+        _basePath = path.dirname require.main.filename
+
         constructor: ( oGivenConfig = {} ) ->
             _oCurrentConfigValues = _.extend _oDefaultConfigValues, oGivenConfig
 
             @port = _oCurrentConfigValues.port
-            @contents = _oCurrentConfigValues.contents
+            @path = path.resolve _basePath, _oCurrentConfigValues.path
+            @contents = path.resolve _basePath, _oCurrentConfigValues.contents
             @home = _oCurrentConfigValues.home
 
     exports.init = ( oConfig ) ->
