@@ -3,6 +3,6 @@
 
 var posib = require( "../lib/server/posib" );
 
-posib.init( {
+posib.start( {
     port: 22345
 } );
