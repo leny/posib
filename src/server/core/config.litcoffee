@@ -12,6 +12,8 @@ Singleton Class to store configuration in-memory.
 
 * * *
 
+    "use strict"
+
     _ = require "lodash"
 
     oConfigInstance = null
