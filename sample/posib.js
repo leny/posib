@@ -1,5 +1,5 @@
 // posib. sample
-// used for devellopment purposes
+// used for development purposes
 
 var posib = require( "../lib/server/posib" );
 

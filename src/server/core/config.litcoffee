@@ -1,4 +1,4 @@
-# [http://posib.krkn.be](posib.)
+# [posib.](http://posib.krkn.be)
 
 ## **/server/core/config.js** - *Configuration Class*
 
