@@ -20,6 +20,8 @@ A *Brick* is an editable tag.
 
     config = require "#{ root }/core/config.js"
 
+    ShortBrick = require "#{ root }/models/brick/short.js"
+
     module.exports = class Brick
 
 Available types
@@ -42,12 +44,16 @@ Available types
 
         @factory = ( $node, fNext ) ->
             sTagName = $node[ "0" ].name
-            fNext null, null
+            switch _getBrickType sTagName
+                when Brick::TYPE_SHORT
+                    fNext null, new ShortBrick $node
+                else
+                    fNext new Error "This tag has no Brick Type associated !"
 
         _getBrickType = ( sTagName ) ->
             switch sTagName.toLowerCase()
                 when "h1", "h2", "h3", "h4", "h5", "h6", "span", "em", "strong", "small", "b", "u", "i", "del", "figcaption"
-                    no # TODO Brick::TYPE_SHORT
+                    Brick::TYPE_SHORT
                 when "p"
                     no # TODO Brick::TYPE_RICH
                 when "img"
