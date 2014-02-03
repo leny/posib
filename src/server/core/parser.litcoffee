@@ -29,6 +29,7 @@ Document parsing class.
         _sPath = null
         _sRawContent = null
         _$ = null
+        _sResultingContent = null
 
 ### Parser( sUrl )
 
@@ -43,15 +44,18 @@ Document parsing class.
             # TODO load content
             # TODO parse bricks
             # TODO fill page infos
+            # TODO parse links
+            # TODO generate content
             # TODO write in cache
             # TODO returns content as text
             Q
                 .fcall _load
                 .then _parseBricks
+                .then _generateCode
                 .fail ( oError ) ->
                     fNext oError
                 .done ->
-                    fNext()
+                    fNext null, _sResultingContent
 
 #### _load
 
@@ -77,8 +81,14 @@ Document parsing class.
             $bricks.each ->
                 console.log "brick:", _$( @ ).attr( "data-posib-ref" )
                 Brick.factory _$( @ ), ( oError, oBrick ) ->
-                    console.log oError, oBrick
                     # TODO check error
                     # TODO call oBrick.render()
                     deferred.resolve() if ++iParsedBricks is $bricks.length
             deferred.promise
+
+#### _generateCode
+
+Export the current DOM content as text.
+
+        _generateCode = ->
+            _sResultingContent = _$.html()

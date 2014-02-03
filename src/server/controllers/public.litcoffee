@@ -35,11 +35,10 @@ From the file path, calling the parser who will return the parsed page from cach
     page = ( oRequest, oResponse ) ->
         page = new Parser oRequest.url
         page.display ( oError, sContent ) ->
-            console.log oError, sContent
 
-> Until that, we simply serve the file
+> TODO check error
 
-            oResponse.sendfile config.get().path + oRequest.url
+            oResponse.send sContent
 
 * * *
 
