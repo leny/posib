@@ -22,6 +22,8 @@ Document parsing class.
 
     config = require "#{ root }/core/config.js"
 
+    Brick = require "#{ root }/models/brick.js"
+
     module.exports = class Parser
         _sUrl = null
         _sPath = null
@@ -69,11 +71,13 @@ Document parsing class.
 #### _parseBricks
 
         _parseBricks = ->
-            # TODO deferred = Q.defer()
-            oBricks = _$( "[data-posib-ref]" )
+            deferred = Q.defer()
+            $bricks = _$( "body *[data-posib-ref]" )
             iParsedBricks = 0
-            oBricks.each ->
+            $bricks.each ->
                 console.log "brick:", _$( @ ).attr( "data-posib-ref" )
-                # TODO call Brick.factory _$( @ ), ->
-                    # TODO check parsed brick count, then defer
-            # TODO defer.promise
+                Brick.factory _$( @ ), ( oError, oBrick ) ->
+                    # TODO check error
+                    # TODO call oBrick.render()
+                    deferred.resolve() if ++iParsedBricks is $bricks.length
+            deferred.promise
