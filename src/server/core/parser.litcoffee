@@ -77,6 +77,7 @@ Document parsing class.
             $bricks.each ->
                 console.log "brick:", _$( @ ).attr( "data-posib-ref" )
                 Brick.factory _$( @ ), ( oError, oBrick ) ->
+                    console.log oError, oBrick
                     # TODO check error
                     # TODO call oBrick.render()
                     deferred.resolve() if ++iParsedBricks is $bricks.length
