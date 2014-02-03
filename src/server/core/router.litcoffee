@@ -33,10 +33,6 @@ Configure some default middlewares
         app.use express.urlencoded()
         app.use express.cookieParser()
 
-Configure static middleware(s)
-
-        app.use express.static sStaticPath
-
 Configure logging middleware
 
         app.use middlewares.log
@@ -45,9 +41,13 @@ Load controllers
 
         require( "#{ root }/controllers/public.js" ).init app
 
-Define the router
+Configure the router
 
         app.use app.router
+
+Configure static middleware(s)
+
+        app.use express.static sStaticPath
 
 Listen the requests
 
