@@ -44,6 +44,11 @@ module.exports = ( grunt ) ->
                 white: no
                 "-W030": yes
                 "-W018": yes
+                # specific addition to jshint for coffeescript issues - might be discussed
+                shadow: yes
+                "-W055": yes
+                "-W040": yes
+                "-W116": yes
             server:
                 src: [ "lib/server/**/*.js" ]
             modules:
