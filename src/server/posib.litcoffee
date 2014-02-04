@@ -27,5 +27,5 @@ started at 02/02/14
         Pandri.clear "data" if not config.get().production
 
         ( store = new Pandri "data" )
-            .load config.get().contents + "/data.json", ->
+            .load "#{ config.get().contents }/data.json", ->
                 router.init config.get().port, config.get().path
