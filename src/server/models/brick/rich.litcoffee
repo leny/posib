@@ -38,7 +38,6 @@ An unique RichBricks can represent subsequent `p` tags.
 ### _render()
 
         _render: ->
-            console.log "RichBrick._render()"
             oAttributes = @node.attr()
             ( @nodes = cheerio @get "content" ).each ->
                 for sAttribute, sValue of oAttributes
