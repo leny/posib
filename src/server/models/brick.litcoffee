@@ -36,9 +36,9 @@ Available types
         TYPE_VIDEO: "video"
         TYPE_TIME: "time"
         TYPE_FILE: "file"
-        TYPE_ARTICLE: "article"
         TYPE_LINK: "link"
         TYPE_TABLE: "table"
+        TYPE_CODE: "code"
 
 ### Brick( $node )
 
@@ -114,12 +114,12 @@ Clean the node for content display, removing useless attribute.
                     no # TODO Brick::TYPE_VIDEO
                 when "time"
                     no # TODO Brick::TYPE_TIME
-                when "article"
-                    no # TODO Brick::TYPE_ARTICLE
                 when "a"
                     no # TODO Brick::TYPE_LINK
                 when "table"
                     no # TODO Brick::TYPE_TABLE
+                when "code"
+                    no # TODO Brick::TYPE_CODE
                 else
                     no
 
