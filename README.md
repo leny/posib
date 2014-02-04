@@ -53,7 +53,7 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
 * **0.1** 
     * ☐ Public core
     * ☑ Short Bricks
-    * ☐ Rich Bricks
+    * ☑ Rich Bricks
     * ☑ Image Bricks (simple)
     * ☐ Page informations
     * ☐ Content caching

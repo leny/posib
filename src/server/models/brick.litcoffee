@@ -99,7 +99,7 @@ Clean the node for content display, removing useless attribute.
                 when "h1", "h2", "h3", "h4", "h5", "h6", "span", "em", "strong", "small", "b", "u", "i", "del", "figcaption"
                     Brick::TYPE_SHORT
                 when "p"
-                    no # TODO Brick::TYPE_RICH
+                    Brick::TYPE_RICH
                 when "img"
                     Brick::TYPE_IMAGE
                 when "address"
@@ -131,6 +131,9 @@ Clean the node for content display, removing useless attribute.
                 when Brick::TYPE_SHORT
                     ShortBrick = require "#{ root }/models/brick/short.js"
                     fNext null, new ShortBrick $node
+                when Brick::TYPE_RICH
+                    RichBrick = require "#{ root }/models/brick/rich.js"
+                    fNext null, new RichBrick $node
                 when Brick::TYPE_IMAGE
                     ImageBrick = require "#{ root }/models/brick/image.js"
                     fNext null, new ImageBrick $node
