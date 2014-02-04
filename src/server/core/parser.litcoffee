@@ -23,6 +23,7 @@ Document parsing class.
     config = require "#{ root }/core/config.js"
 
     Brick = require "#{ root }/models/brick.js"
+    Page = require "#{ root }/models/page.js"
 
     module.exports = class Parser
         _sUrl = null
@@ -30,7 +31,6 @@ Document parsing class.
         _sRawContent = null
         _$ = null
         _sResultingContent = null
-        _sResultingContent = "unparsed"
 
 ### Parser( sUrl )
 
@@ -52,6 +52,7 @@ Document parsing class.
             Q
                 .fcall _load
                 .then _parseBricks
+                .then _pageInfos
                 .then _generateCode
                 .fail ( oError ) ->
                     fNext oError
@@ -87,6 +88,13 @@ Document parsing class.
                     return
                 return
             deferred.promise
+
+#### _pageInfos
+
+        _pageInfos = ->
+            $head = _$( "head" )
+            oPage = new Page _sUrl, $head
+            oPage.render()
 
 #### _generateCode
 

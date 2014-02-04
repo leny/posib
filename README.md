@@ -55,7 +55,7 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
     * ☑ Short Bricks
     * ☑ Rich Bricks
     * ☑ Image Bricks (simple)
-    * ☐ Page informations
+    * ☑ Page informations
     * ☐ Content caching
 * **0.2** 
     * ☐ Admin core
