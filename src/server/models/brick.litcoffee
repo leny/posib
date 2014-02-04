@@ -101,7 +101,7 @@ Clean the node for content display, removing useless attribute.
                 when "p"
                     no # TODO Brick::TYPE_RICH
                 when "img"
-                    no # TODO Brick::TYPE_IMAGE
+                    Brick::TYPE_IMAGE
                 when "address"
                     no # TODO Brick::TYPE_MAP
                 when "form"
@@ -131,6 +131,9 @@ Clean the node for content display, removing useless attribute.
                 when Brick::TYPE_SHORT
                     ShortBrick = require "#{ root }/models/brick/short.js"
                     fNext null, new ShortBrick $node
+                when Brick::TYPE_IMAGE
+                    ImageBrick = require "#{ root }/models/brick/image.js"
+                    fNext null, new ImageBrick $node
                 else
                     fNext new Error "This tag has no Brick Type associated !"
 
