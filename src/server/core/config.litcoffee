@@ -21,6 +21,7 @@ Singleton Class to store configuration in-memory.
 
     class Config
         _oDefaultConfigValues =
+            production: yes
             port: 22000
             path: "."
             contents: "./contents"
@@ -37,6 +38,7 @@ Singleton Class to store configuration in-memory.
             @path = path.resolve _basePath, _oCurrentConfigValues.path
             @contents = path.resolve _basePath, _oCurrentConfigValues.contents
             @home = _oCurrentConfigValues.home
+            @production = _oCurrentConfigValues.production
 
     exports.init = ( oConfig ) ->
         oConfigInstance = new Config oConfig

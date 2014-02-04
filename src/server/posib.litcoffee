@@ -24,6 +24,8 @@ started at 02/02/14
     exports.start = ( oConfig ) ->
         config.init oConfig
 
-        store = new Pandri "data"
-        store.load config.get().contents + "/data.json", ->
-            router.init config.get().port, config.get().path
+        Pandri.clear "data" if not config.get().production
+
+        ( store = new Pandri "data" )
+            .load config.get().contents + "/data.json", ->
+                router.init config.get().port, config.get().path
