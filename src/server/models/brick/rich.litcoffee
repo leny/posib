@@ -40,8 +40,7 @@ An unique RichBricks can represent subsequent `p` tags.
         _render: ->
             oAttributes = @node.attr()
             ( @nodes = cheerio @get "content" ).each ->
-                for sAttribute, sValue of oAttributes
-                    cheerio( @ ).attr sAttribute, sValue
+                cheerio( @ ).attr sAttribute, sValue for sAttribute, sValue of oAttributes
             @node.replaceWith @nodes
 
 ### _clean()
