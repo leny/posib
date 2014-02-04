@@ -66,7 +66,10 @@ Document parsing class.
             readOptions =
                 encoding: "utf-8"
             fs.readFile _sPath, readOptions, ( oError, sRawContent ) ->
-                deferred.reject oError if oError
+                if oError
+                    oError.type = 404
+                    oError.message = "404 - Not Found"
+                    deferred.reject oError
                 _sRawContent = sRawContent
                 _$ = cheerio.load sRawContent,
                     xmlMode: yes
