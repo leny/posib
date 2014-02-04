@@ -39,7 +39,7 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
 
 ## Release History
 
-> **posib.** already exists before this project, as a personnal 2011 PHP project (non open-sourced). This repository is the reborn of the idea, using all the power and advantages of node.js, and will be released as version 3 on npm.
+> **posib.** already exists before this project, as a personnal 2011 PHP project (non open-sourced). This repository is the reborn of the idea, using all the power and advantages of node.js, and will be released as version 1.0 on npm.
 
 * **2011-11-25**: Starting the original `PHP` project.
 * **2012-01-12**: Release version 1.0
@@ -47,6 +47,46 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
 * **2013-09-01**: Last version of 1.x branch : 1.8.14
 * **2013-09-01**: Last version of 2.x branch : 2.9.5
 * **2014-02-02**: Starting `node.js` project
+
+### Milestones planning
+
+* **0.1** 
+    * ☐ Public core
+    * ☑ Short Bricks
+    * ☐ Rich Bricks
+    * ☐ Image Bricks (simple)
+    * ☐ Page informations
+    * ☐ Content caching
+* **0.2** 
+    * ☐ Admin core
+    * ☐ Modals core
+    * ☐ Short Bricks
+    * ☐ Rich Bricks
+    * ☐ Image Bricks (simple)
+    * ☐ Page informations
+    * ☐ --- first push on **npm**
+* **0.3** 
+    * ☐ Form Bricks
+* **0.4**
+    * ☐ Map Bricks
+* **0.5**
+    * ☐ Image Bricks (gallery)
+* **0.6**
+    * ☐ Code Bricks
+* **0.7**
+    * ☐ Audio Bricks
+    * ☐ Video Bricks
+* **0.8**
+    * ☐ Time Bricks
+* **0.9**
+    * ☐ List Bricks
+* **0.10**
+    * ☐ Table Bricks
+* **1.0**
+    * ☐ Documentation for developpers
+    * ☐ Documentation for users
+    * ☐ Presentation website
+    * ☐ --- release on **npm**
 
 ## License
 Copyright (c) 2014 krkn  
