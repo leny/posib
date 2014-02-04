@@ -51,10 +51,14 @@ Brick is an abstract class. The constructor is called from inherited classes.
 
 ### get( sKey )
 
+Getter for brick data.
+
         get: ( sKey ) ->
             @data[ sKey ]
 
 ### render()
+
+Calling the child method `_render` (filling the node with the good content).
 
         render: ->
             @_render()
@@ -82,6 +86,8 @@ Save the current data in the *Pandri* data store.
             @store.save fNext
 
 ### _clean()
+
+Clean the node for content display, removing useless attribute.
 
         _clean: ->
             @node.removeAttr "data-posib-ref"

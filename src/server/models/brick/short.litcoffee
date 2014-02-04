@@ -26,11 +26,6 @@ The following tags are ShortBricks : `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `span`,
 
     module.exports = class ShortBrick extends Brick
 
-### render()
-
-        render: ->
-            super()
-
 ### _create()
 
         _create: ->
