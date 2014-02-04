@@ -4,5 +4,6 @@
 var posib = require( "../lib/server/posib" );
 
 posib.start( {
+    production: false,
     port: 22345
 } );
