@@ -26,5 +26,18 @@ The following tags are ShortBricks : `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `span`,
 
     module.exports = class ShortBrick extends Brick
 
-        constructor: ( $node ) ->
-            console.log "ShortBrick"
+### render()
+
+        render: ->
+            super()
+
+### _create()
+
+        _create: ->
+            content: @node.text().trim() or "Lorem ipsum..."
+
+### _render()
+
+        _render: ->
+            @node.text @get "content"
+

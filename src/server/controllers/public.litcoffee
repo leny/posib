@@ -35,9 +35,7 @@ From the file path, calling the parser who will return the parsed page from cach
     page = ( oRequest, oResponse ) ->
         page = new Parser oRequest.url
         page.display ( oError, sContent ) ->
-
-> TODO check error
-
+            oResponse.send 500, oError.message if oError # TODO better error support
             oResponse.send sContent
 
 * * *

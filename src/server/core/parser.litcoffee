@@ -30,6 +30,7 @@ Document parsing class.
         _sRawContent = null
         _$ = null
         _sResultingContent = null
+        _sResultingContent = "unparsed"
 
 ### Parser( sUrl )
 
@@ -79,11 +80,12 @@ Document parsing class.
             $bricks = _$( "body *[data-posib-ref]" )
             iParsedBricks = 0
             $bricks.each ->
-                console.log "brick:", _$( @ ).attr( "data-posib-ref" )
                 Brick.factory _$( @ ), ( oError, oBrick ) ->
                     # TODO check error
-                    # TODO call oBrick.render()
+                    oBrick.render() if oBrick
                     deferred.resolve() if ++iParsedBricks is $bricks.length
+                    return
+                return
             deferred.promise
 
 #### _generateCode

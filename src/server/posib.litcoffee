@@ -16,9 +16,14 @@ started at 02/02/14
 
     root = __dirname
 
+    Pandri = require "pandri"
+
     config = require "#{ root }/core/config.js"
     router = require "#{ root }/core/router.js"
 
     exports.start = ( oConfig ) ->
         config.init oConfig
-        router.init config.get().port, config.get().path
+
+        store = new Pandri "data"
+        store.load config.get().contents + "/data.json", ->
+            router.init config.get().port, config.get().path

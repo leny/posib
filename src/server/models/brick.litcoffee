@@ -18,9 +18,9 @@ A *Brick* is an editable tag.
 
     root = "#{ __dirname }/.."
 
-    config = require "#{ root }/core/config.js"
+    Pandri = require "pandri"
 
-    ShortBrick = require "#{ root }/models/brick/short.js"
+    config = require "#{ root }/core/config.js"
 
     module.exports = class Brick
 
@@ -40,15 +40,53 @@ Available types
         TYPE_LINK: "link"
         TYPE_TABLE: "table"
 
-### Brick.factory( $node, fNext )
+### Brick( $node )
 
-        @factory = ( $node, fNext ) ->
-            sTagName = $node[ "0" ].name
-            switch _getBrickType sTagName
-                when Brick::TYPE_SHORT
-                    fNext null, new ShortBrick $node
-                else
-                    fNext new Error "This tag has no Brick Type associated !"
+Brick is an abstract class. The constructor is called from inherited classes.
+
+        constructor: ( $node ) ->
+            @node = $node
+            @reference = $node.attr "data-posib-ref"
+            @_load()
+
+### get( sKey )
+
+        get: ( sKey ) ->
+            @data[ sKey ]
+
+### render()
+
+        render: ->
+            @_render()
+            @_clean()
+
+### _load()
+
+Load the current brick infos from the *Pandri* data store.
+If the *Pandri* store has no data for the current Brick, the `_create` method is called.
+This method returns the base data for the current Brick type.
+
+        _load: ->
+            @store = Pandri.get "data"
+            oData = @store.get @reference
+            @isNew = !oData
+            @data = oData ? @_create()
+            @_save() if @isNew
+
+### _save()
+
+Save the current data in the *Pandri* data store.
+
+        _save: ( fNext ) ->
+            @store.set @reference, @data
+            @store.save fNext
+
+### _clean()
+
+        _clean: ->
+            @node.removeAttr "data-posib-ref"
+
+#### _getBrickType( sTagName )
 
         _getBrickType = ( sTagName ) ->
             switch sTagName.toLowerCase()
@@ -78,3 +116,15 @@ Available types
                     no # TODO Brick::TYPE_TABLE
                 else
                     no
+
+### Brick.factory( $node, fNext )
+
+        @factory = ( $node, fNext ) ->
+            sTagName = $node[ "0" ].name
+            switch _getBrickType sTagName
+                when Brick::TYPE_SHORT
+                    ShortBrick = require "#{ root }/models/brick/short.js"
+                    fNext null, new ShortBrick $node
+                else
+                    fNext new Error "This tag has no Brick Type associated !"
+

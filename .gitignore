@@ -5,3 +5,5 @@ node_modules
 npm-debug.log
 .svn
 .vagrant
+
+sample/contents/data.json
