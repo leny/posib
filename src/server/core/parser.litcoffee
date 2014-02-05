@@ -15,7 +15,7 @@ Document parsing class.
     "use strict"
 
     root = "#{ __dirname }/.."
-    client = "#{ root }/../client/"
+    client = "#{ root }/../client/templates"
 
     cheerio = require "cheerio"
     fs = require "fs"
