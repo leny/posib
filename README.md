@@ -50,14 +50,14 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
 
 ### Milestones planning
 
-* **0.1** 
+* ☐ **0.1** 
     * ☐ Public core
     * ☑ Short Bricks
     * ☑ Rich Bricks
     * ☑ Image Bricks (simple)
     * ☑ Page informations
-    * ☐ Content caching
-* **0.2** 
+    * ☑ Content caching
+* ☐ **0.2** 
     * ☐ Admin core
     * ☐ Modals core
     * ☐ Short Bricks
@@ -65,24 +65,24 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
     * ☐ Image Bricks (simple)
     * ☐ Page informations
     * ☐ --- first push on **npm**
-* **0.3** 
+* ☐ **0.3** 
     * ☐ Form Bricks
-* **0.4**
+* ☐ **0.4**
     * ☐ Map Bricks
-* **0.5**
+* ☐ **0.5**
     * ☐ Image Bricks (gallery)
-* **0.6**
+* ☐ **0.6**
     * ☐ Code Bricks
-* **0.7**
+* ☐ **0.7**
     * ☐ Audio Bricks
     * ☐ Video Bricks
-* **0.8**
+* ☐ **0.8**
     * ☐ Time Bricks
-* **0.9**
+* ☐ **0.9**
     * ☐ List Bricks
-* **0.10**
+* ☐ **0.10**
     * ☐ Table Bricks
-* **1.0**
+* ☐ **1.0**
     * ☐ Documentation for developpers
     * ☐ Documentation for users
     * ☐ Presentation website

@@ -24,8 +24,19 @@ started at 02/02/14
     exports.start = ( oConfig ) ->
         config.init oConfig
 
-        Pandri.clear "data" if not config.get().production
+        if not config.get().production
+            Pandri.clear "data"
+            Pandri.clear "cache"
 
-        ( store = new Pandri "data" )
+        bDataIsLoaded = no
+        bCacheIsLoaded = no
+
+        ( new Pandri "data" )
             .load "#{ config.get().contents }/data.json", ->
-                router.init config.get().port, config.get().path
+                bDataIsLoaded = yes
+                router.init config.get().port, config.get().path if bDataIsLoaded and bCacheIsLoaded
+
+        ( new Pandri "cache" )
+            .load "#{ config.get().contents }/cache.json", ->
+                bCacheIsLoaded = yes
+                router.init config.get().port, config.get().path if bDataIsLoaded and bCacheIsLoaded

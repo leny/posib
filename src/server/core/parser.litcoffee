@@ -19,6 +19,7 @@ Document parsing class.
     cheerio = require "cheerio"
     fs = require "fs"
     Q = require "q"
+    Pandri = require "pandri"
 
     config = require "#{ root }/core/config.js"
 
@@ -31,29 +32,25 @@ Document parsing class.
         _sRawContent = null
         _$ = null
         _sResultingContent = null
+        _oCacheStore = null
 
 ### Parser( sUrl )
 
         constructor: ( sUrl ) ->
             _sUrl = sUrl
             _sPath = config.get().path + _sUrl
+            _oCacheStore = Pandri.get "cache"
 
 ### display( fNext )
 
         display: ( fNext ) ->
-            # TODO get from cache
-            # TODO load content
-            # TODO parse bricks
-            # TODO fill page infos
-            # TODO parse links
-            # TODO generate content
-            # TODO write in cache
-            # TODO returns content as text
+            return fNext null, _sCachedContent if _sCachedContent = _oCacheStore.get _sUrl
             Q
                 .fcall _load
                 .then _parseBricks
                 .then _pageInfos
                 .then _generateCode
+                .then _writeInCache
                 .fail ( oError ) ->
                     fNext oError
                 .done ->
@@ -105,3 +102,9 @@ Export the current DOM content as text.
 
         _generateCode = ->
             _sResultingContent = _$.html()
+
+#### _writeInCache
+
+        _writeInCache = ->
+            _oCacheStore.set _sUrl, _sResultingContent
+            _oCacheStore.save()
