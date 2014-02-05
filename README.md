@@ -50,8 +50,8 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
 
 ### Milestones planning
 
-* ☐ **0.1** 
-    * ☐ Public core
+* ☑ **0.1** 
+    * ☑ Public core
     * ☑ Short Bricks
     * ☑ Rich Bricks
     * ☑ Image Bricks (simple)
