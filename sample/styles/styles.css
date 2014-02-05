@@ -26,8 +26,7 @@ body{width:100%;*zoom:1;}body:before,body:after{content:"";display:table;}
 body:after{clear:both;}
 html{background:transparent url(img/crbn.png) top left repeat;}
 body{font:normal 62.5%/1.5 Verdana,Arial,sans-serif;}
-#wrapper{width:100%;min-height:750px;background:#ffffff url(img/bcg.png) top left repeat;border-top:1px solid #666;border-bottom:1px solid #666;position:relative;}#wrapper:before,#wrapper:after{display:block;content:"";width:100%;height:9px;position:absolute;left:0;background:yellow;}
-#wrapper:before{background:transparent url(img/shadow_bottom.png) bottom left repeat-x;top:-9px;}
+#wrapper{width:100%;min-height:750px;background:#ffffff url(img/bcg.png) top left repeat;border-top:1px solid #666;border-bottom:1px solid #666;position:relative;}#wrapper:after{display:block;content:"";width:100%;height:9px;position:absolute;left:0;background:yellow;}
 #wrapper:after{background:transparent url(img/shadow_up.png) top left repeat-x;bottom:-9px;}
 header{position:relative;height:90px;margin:0 auto 30px;*zoom:1;width:960px;margin:0 auto;}header:before,header:after{content:"";display:table;}
 header:after{clear:both;}
