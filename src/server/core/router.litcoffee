@@ -39,6 +39,7 @@ Configure logging middleware
 
 Load controllers
 
+        require( "#{ root }/controllers/admin.js" ).init app
         require( "#{ root }/controllers/public.js" ).init app
 
 Configure the router

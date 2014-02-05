@@ -16,6 +16,7 @@ n stable
 # --- npm packages
 npm install -g grunt-cli --unsafe-perm
 npm install -g nodemon --unsafe-perm
+npm install -g browserify --unsafe-perm
 # -- NGINX
 apt-get install -y nginx-extras
 echo "events {

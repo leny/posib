@@ -21,15 +21,15 @@
             "file_exclude_patterns": [
                 "*.orig"
             ],
-            "name": "Server",
-            "path": "src/server"
+            "name": "Sources",
+            "path": "src"
         },
         {
             "file_exclude_patterns": [
                 "*.orig"
             ],
-            "name": "Client",
-            "path": "src/client"
+            "name": "Lib",
+            "path": "lib"
         },
         {
             "file_exclude_patterns": [

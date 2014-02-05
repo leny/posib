@@ -15,11 +15,13 @@ Document parsing class.
     "use strict"
 
     root = "#{ __dirname }/.."
+    client = "#{ root }/../client/"
 
     cheerio = require "cheerio"
     fs = require "fs"
     Q = require "q"
     Pandri = require "pandri"
+    swig = require "swig"
 
     config = require "#{ root }/core/config.js"
 
@@ -51,6 +53,20 @@ Document parsing class.
                 .then _pageInfos
                 .then _generateCode
                 .then _writeInCache
+                .fail ( oError ) ->
+                    fNext oError
+                .done ->
+                    fNext null, _sResultingContent
+
+### showConnect( fNext )
+
+        showConnect: ( fNext ) ->
+            Q
+                .fcall _load
+                .then _parseBricks
+                .then _pageInfos
+                .then _addConnectElements
+                .then _generateCode
                 .fail ( oError ) ->
                     fNext oError
                 .done ->
@@ -108,3 +124,29 @@ Export the current DOM content as text.
         _writeInCache = ->
             _oCacheStore.set _sUrl, _sResultingContent
             _oCacheStore.save()
+
+#### _addConnectElements
+
+        _addConnectElements = ->
+
+Add admin stylesheet.
+
+            ( $stylesheet = cheerio "<link />" )
+                .attr "rel", "stylesheet"
+                .attr "href", "/__posib/styles/admin.css"
+
+            _$( "head" )
+                .append $stylesheet
+
+Add modal html code.
+
+            $modal = cheerio swig.renderFile "#{ client }/modals/connect.html", {}
+
+Add `script` tag for connect box.
+
+            ( $script = cheerio "<script />"  )
+                .attr "src", "/__posib/js/connect.js"
+
+            _$( "body" )
+                .append $modal
+                .append $script
