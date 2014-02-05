@@ -48,6 +48,7 @@ Configure the router
 
 Configure static middleware(s)
 
+        app.use "/__posib", express.static "#{ root }/../client"
         app.use express.static sStaticPath
 
 Listen the requests
