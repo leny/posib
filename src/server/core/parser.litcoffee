@@ -142,11 +142,15 @@ Add modal html code.
 
             $modal = cheerio swig.renderFile "#{ client }/modals/connect.html", {}
 
-Add `script` tag for connect box.
+Add `script` tags for libs & connect box.
+
+            ( $libs = cheerio "<script />"  )
+                .attr "src", "/__posib/js/libs.min.js"
 
             ( $script = cheerio "<script />"  )
                 .attr "src", "/__posib/js/connect.js"
 
             _$( "body" )
                 .append $modal
+                .append $libs
                 .append $script
