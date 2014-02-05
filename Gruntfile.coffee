@@ -57,15 +57,15 @@ module.exports = ( grunt ) ->
                     jquery: yes
                     devel: yes
                 src: [ "lib/client/*.js" ]
-        stylus:
+        sass:
             options:
-                compress: no
+                style: "compressed"
             public:
                 files:
-                    "lib/client/styles/public.css": "src/client/styles/public.styl"
+                    "lib/client/styles/public.css": "src/client/styles/public.sass"
             admin:
                 files:
-                    "lib/client/styles/admin.css": "src/client/styles/admin.styl"
+                    "lib/client/styles/admin.css": "src/client/styles/admin.sass"
         csso:
             options:
                 report: "gzip"
@@ -101,13 +101,13 @@ module.exports = ( grunt ) ->
                 ]
             styles:
                 files: [
-                    "src/client/styles/**/*.styl"
+                    "src/client/styles/**/*.sass"
                 ]
                 options:
                     nospawn: yes
                 tasks: [
                     "clear"
-                    "stylus"
+                    "sass"
                     "bumpup:prerelease"
                 ]
         nodemon:
@@ -136,7 +136,7 @@ module.exports = ( grunt ) ->
         "clear"
         "coffee"
         "jshint"
-        "stylus"
+        "sass"
         "bumpup:prerelease"
     ]
 
@@ -144,7 +144,7 @@ module.exports = ( grunt ) ->
         "clear"
         "coffee"
         "jshint"
-        "stylus"
+        "sass"
         "bumpup:prerelease"
         "concurrent:work"
     ]

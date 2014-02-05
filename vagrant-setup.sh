@@ -7,6 +7,8 @@ locale-gen fr_BE fr_BE.UTF-8
 dpkg-reconfigure locales
 # -- GraphicsMagick
 apt-get install -y graphicsmagick
+# -- SASS
+gem install sass
 # -- NODE
 add-apt-repository ppa:chris-lea/node.js
 apt-get update
@@ -100,4 +102,5 @@ echo "------------------------"
 echo "Duration : $(($ELAPSED_TIME/60)) min $(($ELAPSED_TIME%60)) sec"
 echo "-- node `node --version`"
 echo "-- npm v`npm --version`"
+echo "-- `sass --version`"
 echo "------------------------"
