@@ -1,6 +1,4 @@
-# posib.
-
-![posib.](http://raw2.github.com/krkn/posib/master/lib/client/styles/img/logo.svg)
+# ![posib.](http://raw2.github.com/krkn/posib/master/lib/client/styles/img/logo.png)
 
 Simple in-place editing CMS
 
