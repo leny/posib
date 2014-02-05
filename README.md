@@ -1,5 +1,7 @@
 # posib.
 
+![posib.](http://raw2.github.com/krkn/posib/master/lib/client/styles/img/logo.svg)
+
 Simple in-place editing CMS
 
 * * *
