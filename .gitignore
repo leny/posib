@@ -7,3 +7,5 @@ npm-debug.log
 .vagrant
 
 sample/contents/*.json
+
+.sass-cache

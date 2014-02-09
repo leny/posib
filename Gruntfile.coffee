@@ -5,6 +5,9 @@ module.exports = ( grunt ) ->
     require( "matchdep" ).filterDev( "grunt-*" ).forEach grunt.loadNpmTasks
 
     grunt.initConfig
+        clean:
+            client:
+                src: [ "src/client/scripts/**/*.js" ]
         coffee:
             server:
                 expand: yes
@@ -22,7 +25,7 @@ module.exports = ( grunt ) ->
                 src: [
                     "**/*.litcoffee"
                 ]
-                dest: "lib/client/js/"
+                dest: "src/client/scripts/"
                 ext: ".js"
         jshint:
             options:
@@ -36,7 +39,6 @@ module.exports = ( grunt ) ->
                 loopfunc: yes
                 newcap: yes
                 noarg: yes
-                node: yes
                 noempty: yes
                 sub: yes
                 undef: yes
@@ -50,7 +52,25 @@ module.exports = ( grunt ) ->
                 "-W040": yes
                 "-W116": yes
             server:
+                options:
+                    node: yes
                 src: [ "lib/server/**/*.js" ]
+            client:
+                options:
+                    browser: yes
+                    jquery: yes
+                    devel: yes
+                    globals:
+                        require: yes
+                src: [ "src/client/scripts/**/*.js" ]
+        browserify:
+            connect:
+                files:
+                    "lib/client/js/connect.js": [ "src/client/scripts/modules/connect/connect.js" ]
+        uglify:
+            connect:
+                files:
+                    "lib/client/js/connect.min.js": [ "lib/client/js/connect.js" ]
         sass:
             options:
                 style: "compressed"
@@ -90,7 +110,9 @@ module.exports = ( grunt ) ->
                     nospawn: yes
                 tasks: [
                     "clear"
-                    "newer:coffee:client"
+                    "coffee:client"
+                    "browserify"
+                    "clean:client"
                     "bumpup:prerelease"
                 ]
             styles:
@@ -130,6 +152,9 @@ module.exports = ( grunt ) ->
         "clear"
         "coffee"
         "jshint"
+        "browserify"
+        "uglify"
+        "clean"
         "sass"
         "bumpup:prerelease"
     ]
@@ -138,6 +163,8 @@ module.exports = ( grunt ) ->
         "clear"
         "coffee"
         "jshint"
+        "browserify"
+        "clean"
         "sass"
         "bumpup:prerelease"
         "concurrent:work"

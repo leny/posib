@@ -2,7 +2,7 @@
   "name": "posib",
   "description": "Simple in-place editing CMS",
   "keywords": [],
-  "version": "0.1.0-42",
+  "version": "0.1.0-54",
   "homepage": "http://posib.krkn.be",
   "author": {
     "name": "krkn",
@@ -47,7 +47,10 @@
     "grunt-csso": "~0.5",
     "jshint-stylish": "~0.1",
     "matchdep": "~0.3",
-    "grunt-newer": "~0.6"
+    "grunt-newer": "~0.6",
+    "browserify": "~3.25",
+    "grunt-browserify": "~1.3",
+    "grunt-contrib-clean": "~0.5"
   },
   "dependencies": {
     "lodash": "~2.4",
@@ -56,6 +59,7 @@
     "cheerio": "~0.13",
     "pandri": "~0.1",
     "q": "~1.0",
-    "swig": "~1.3.2"
+    "jquery": "~2.1",
+    "swig": "~1.3"
   }
 }
