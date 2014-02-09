@@ -147,15 +147,11 @@ Add modal html code.
                 .append $modal
 
 
-Add `script` tags for libs & connect box.
-
-            ( $libs = cheerio "<script />"  )
-                .attr "src", "/__posib/js/libs.min.js"
+Add `script` tag for connect box.
 
             ( $script = cheerio "<script />"  )
                 .attr "src", "/__posib/js/connect.js"
 
             _$( "body" )
                 .append $posib
-                .append $libs
                 .append $script
