@@ -83,7 +83,7 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
 * ☐ **0.10**
     * ☐ Table Bricks
 * ☐ **1.0**
-    * ☐ Documentation for developpers
+    * ☐ Documentation for developers
     * ☐ Documentation for users
     * ☐ Presentation website
     * ☐ --- release on **npm**
