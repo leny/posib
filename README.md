@@ -1,4 +1,4 @@
-# ![posib.](http://raw2.github.com/krkn/posib/master/lib/client/styles/img/logo.png)
+# ![posib.](https://raw.github.com/krkn/posib/master/lib/client/styles/img/logo.png)
 
 Simple in-place editing CMS
 
@@ -21,10 +21,10 @@ All the code is stored under the `/src` folder. The code is written in **Literat
 
 Setting up a development environment to contribute (or study) **posib.** is very simple : you only need to install [Vagrant](http://www.vagrantup.com).
 
-In your console, browse to the **posib.** root and enter : 
+In your console, browse to the **posib.** root and enter :
 
     $> vagrant up && vagrant ssh
-    
+
 After the install, you will be connected by ssh inside the virtual machine.  
 You only need to enter :
 
@@ -50,14 +50,14 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
 
 ### Milestones planning
 
-* ☑ **0.1** 
+* ☑ **0.1**
     * ☑ Public core
     * ☑ Short Bricks
     * ☑ Rich Bricks
     * ☑ Image Bricks (simple)
     * ☑ Page informations
     * ☑ Content caching
-* ☐ **0.2** 
+* ☐ **0.2**
     * ☐ Admin core
     * ☐ Modals core
     * ☐ Short Bricks
@@ -65,7 +65,7 @@ If you use [SublimeText](http://www.sublimetext.com), a `sublime-project` file i
     * ☐ Image Bricks (simple)
     * ☐ Page informations
     * ☐ --- first push on **npm**
-* ☐ **0.3** 
+* ☐ **0.3**
     * ☐ Form Bricks
 * ☐ **0.4**
     * ☐ Map Bricks
