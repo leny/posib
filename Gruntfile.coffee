@@ -71,15 +71,17 @@ module.exports = ( grunt ) ->
             connect:
                 files:
                     "lib/client/js/connect.min.js": [ "lib/client/js/connect.js" ]
-        sass:
+        stylus:
             options:
-                style: "compressed"
+                use: [
+                    "nib"
+                ]
             public:
                 files:
-                    "lib/client/styles/public.css": "src/client/styles/public.sass"
+                    "lib/client/styles/public.css": "src/client/styles/public.styl"
             admin:
                 files:
-                    "lib/client/styles/admin.css": "src/client/styles/admin.sass"
+                    "lib/client/styles/admin.css": "src/client/styles/admin.styl"
         csso:
             options:
                 report: "gzip"
@@ -117,13 +119,13 @@ module.exports = ( grunt ) ->
                 ]
             styles:
                 files: [
-                    "src/client/styles/**/*.sass"
+                    "src/client/styles/**/*.styl"
                 ]
                 options:
                     nospawn: yes
                 tasks: [
                     "clear"
-                    "sass"
+                    "stylus"
                     "bumpup:prerelease"
                 ]
         supervisor:
@@ -155,7 +157,7 @@ module.exports = ( grunt ) ->
         "browserify"
         "uglify"
         "clean"
-        "sass"
+        "stylus"
         "bumpup:prerelease"
     ]
 
@@ -165,7 +167,7 @@ module.exports = ( grunt ) ->
         "jshint"
         "browserify"
         "clean"
-        "sass"
+        "stylus"
         "bumpup:prerelease"
         "concurrent:work"
     ]
