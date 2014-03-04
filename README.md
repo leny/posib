@@ -29,8 +29,8 @@ After the install, you will be connected by ssh inside the virtual machine.
 You only need to enter :
 
     $> grunt work
-    
-It will launch `grunt watch` and `nodemon` tasks, compiling and restarting server during your development.
+
+It will launch `grunt watch` and `supervisor` tasks, compiling and restarting server during your development.
 
 Open a browser to [192.168.1.222](http://192.168.1.222) to preview the **posib.** development website.  
 The files for the *dev* website are stored under the `sample` folder.

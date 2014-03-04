@@ -126,11 +126,11 @@ module.exports = ( grunt ) ->
                     "sass"
                     "bumpup:prerelease"
                 ]
-        nodemon:
+        supervisor:
             work:
                 script: "sample/posib.js"
                 options:
-                    ext: "js"
+                    extensions: "js"
                     watch: [ "lib/server" ]
                     ignore: [
                         "node_modules/**"
@@ -139,7 +139,7 @@ module.exports = ( grunt ) ->
                     ]
         concurrent:
             work:
-                tasks: [ "nodemon:work", "watch" ]
+                tasks: [ "supervisor", "watch" ]
                 options:
                     logConcurrentOutput: yes
         todo:

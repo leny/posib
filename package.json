@@ -42,7 +42,6 @@
     "grunt-contrib-sass": "~0.7",
     "grunt-contrib-watch": "~0.5",
     "grunt-contrib-uglify": "~0.3",
-    "grunt-nodemon": "~0.2",
     "grunt-concurrent": "~0.4",
     "grunt-csso": "~0.5",
     "jshint-stylish": "~0.1",
@@ -50,7 +49,8 @@
     "grunt-newer": "~0.6",
     "browserify": "~3.25",
     "grunt-browserify": "~1.3",
-    "grunt-contrib-clean": "~0.5"
+    "grunt-contrib-clean": "~0.5",
+    "grunt-supervisor": "~0.1"
   },
   "dependencies": {
     "lodash": "~2.4",
