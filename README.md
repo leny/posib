@@ -15,7 +15,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ### Code organization
 
-All the code is stored under the `/src` folder. The code is written in **Literate Coffeescript**.
+All the code is stored under the `/src` folder. The code is written in **Coffeescript**.
 
 ### Setup development environment
 
