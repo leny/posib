@@ -51,8 +51,7 @@ module.exports = class Parser
             .then _writeInCache
             .fail ( oError ) ->
                 fNext oError
-            .done ->
-                fNext null, _sResultingContent
+            .done -> fNext null, _sResultingContent
 
     # showConnect( fNext )
     showConnect: ( fNext ) ->
@@ -64,8 +63,7 @@ module.exports = class Parser
             .then _generateCode
             .fail ( oError ) ->
                 fNext oError
-            .done ->
-                fNext null, _sResultingContent
+            .done -> fNext null, _sResultingContent
 
     # _load
     _load = ->
@@ -90,7 +88,7 @@ module.exports = class Parser
         $bricks = _$( "body *[data-posib-ref]" )
         iParsedBricks = 0
         $bricks.each ->
-            Brick.factory _$( @ ), ( oError, oBrick ) ->
+            Brick.factory _$( this ), ( oError, oBrick ) ->
                 # TODO check error
                 oBrick.render() if oBrick
                 deferred.resolve() if ++iParsedBricks is $bricks.length

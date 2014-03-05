@@ -37,11 +37,11 @@ module.exports = class RichBrick extends Brick
     _render: ->
         oAttributes = @node.attr()
         ( @nodes = cheerio @get "content" ).each ->
-            cheerio( @ ).attr sAttribute, sValue for sAttribute, sValue of oAttributes
+            cheerio( this ).attr sAttribute, sValue for sAttribute, sValue of oAttributes
         @node.replaceWith @nodes
 
     # _clean()
     # As the RichBrick class can rely multiple nodes, the default Brick._clean() method isnt adapted.
     _clean: ->
         @nodes.each ->
-            cheerio( @ ).removeAttr "data-posib-ref"
+            cheerio( this ).removeAttr "data-posib-ref"
