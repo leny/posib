@@ -8,6 +8,41 @@ module.exports = ( grunt ) ->
         clean:
             client:
                 src: [ "src/client/scripts/**/*.js" ]
+        coffeelint:
+            options:
+                arrow_spacing:
+                    level: "error"
+                camel_case_classes:
+                    level: "error"
+                duplicate_key:
+                    level: "error"
+                indentation:
+                    level: "error"
+                    value: 4
+                max_line_length:
+                    level: "ignore"
+                no_backticks:
+                    level: "error"
+                no_empty_param_list:
+                    level: "error"
+                no_stand_alone_at:
+                    level: "error"
+                no_tabs:
+                    level: "error"
+                no_throwing_strings:
+                    level: "error"
+                no_trailing_semicolons:
+                    level: "error"
+                no_unnecessary_fat_arrows:
+                    level: "error"
+                space_operators:
+                    level: "error"
+            server:
+                files:
+                    src: [ "src/server/**/*.coffee" ]
+            client:
+                files:
+                    src: [ "src/client/**/*.coffee" ]
         coffee:
             server:
                 expand: yes
@@ -101,6 +136,7 @@ module.exports = ( grunt ) ->
                     nospawn: yes
                 tasks: [
                     "clear"
+                    "newer:coffeelint:server"
                     "newer:coffee:server"
                     "bumpup:prerelease"
                 ]
@@ -112,6 +148,7 @@ module.exports = ( grunt ) ->
                     nospawn: yes
                 tasks: [
                     "clear"
+                    "coffeelint:client"
                     "coffee:client"
                     "browserify"
                     "clean:client"
@@ -152,6 +189,7 @@ module.exports = ( grunt ) ->
 
     grunt.registerTask "default", [
         "clear"
+        "coffeelint"
         "coffee"
         "jshint"
         "browserify"
@@ -163,6 +201,7 @@ module.exports = ( grunt ) ->
 
     grunt.registerTask "work", [
         "clear"
+        "coffeelint"
         "coffee"
         "jshint"
         "browserify"
