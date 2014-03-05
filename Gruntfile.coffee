@@ -48,7 +48,7 @@ module.exports = ( grunt ) ->
                 expand: yes
                 cwd: "src/server/"
                 src: [
-                    "**/*.litcoffee"
+                    "**/*.coffee"
                 ]
                 dest: "lib/server/"
                 ext: ".js"
@@ -58,7 +58,7 @@ module.exports = ( grunt ) ->
                 expand: yes
                 cwd: "src/client/scripts/"
                 src: [
-                    "**/*.litcoffee"
+                    "**/*.coffee"
                 ]
                 dest: "src/client/scripts/"
                 ext: ".js"
@@ -130,7 +130,7 @@ module.exports = ( grunt ) ->
         watch:
             server:
                 files: [
-                    "src/server/**/*.litcoffee"
+                    "src/server/**/*.coffee"
                 ]
                 options:
                     nospawn: yes
@@ -142,7 +142,7 @@ module.exports = ( grunt ) ->
                 ]
             client:
                 files: [
-                    "src/client/**/*.litcoffee"
+                    "src/client/**/*.coffee"
                 ]
                 options:
                     nospawn: yes
