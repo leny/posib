@@ -4,6 +4,10 @@ Simple in-place editing CMS
 
 * * *
 
+> **NOTE:** This project will be erased and rewrite from scratch in late 2016. The new code will be hosted on the [posib/posib](https://github.com/posib/posib) repository.
+
+* * *
+
 ## Documentation
 _(Coming soon)_
 
